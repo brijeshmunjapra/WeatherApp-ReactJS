@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.temp-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: black;
+    background-size: cover;
+}
+
+.search-container {
+    position: relative;
+
+    border: 5px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+.search-term {
+    width: 80%;
+    padding: 10px;
+    outline: 0 none;
+}
+
+.searchButton {
+    width: 20%;
+    border: 0;
+    background: black;
+    height: 35px;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+}
+
+.weather-info-container {
+    width: 800px;
+}
+
+.weather-condition {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.weatherInfo {
+    display: flex;
+    padding: 20px;
+    border: 5px solid white;
+    position: relative;
+    background: rgba(210, 216, 39, 0.636);
+    border-radius: 15px;
+    min-height: 400px;
+    align-items: center;
+}
+
+.firstpart{
+   flex: 1;
+}
+
+.temp {
+    text-align: center;
+}
+
+.temperature {
+    font-size: 70px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.temperature sup {
+    font-size: 25px;
+    position: relative;
+    top: -6px;
+    left: 3px;
+}
+
+.description {
+    text-align: center;
+    line-height: 25px;
+}
+
+.secondpart {
+    flex: 2;
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.info {
+    width: 24%;
+    text-align: center;
+    padding: 20px 0;
+    align-items: center;
+    border: 3px solid black;
+    background: white;
+    border-radius: 40%;
+}
+
+.info p {
+    margin: 0;
+    padding: 0 15px;
+}
+
+.temp-wrap .wi {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.place,
+.weatherCondition {
+    font-weight: 500;
+}
+
+/*-------------------*/
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.error-message {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.city-name {
+    color: black;
+}
+
+@media (max-width:400px) {
+
+    .temp-wrap {
+        width: 100%;
+        margin: 10px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        background: #818283;
+        background-size: cover;
+    }
+
+    .search-container {
+        width: 90%;
+        margin: auto auto;
+        margin-bottom: 10px;
+    }
+
+    .more-temp-info {
+        display: flex;
+        color: #004870;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+
+    .align {
+        text-align: start;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+
+}
+
+@media(max-width:350px) {
+
+    .temp-wrap {
+        width: 100%;
+        margin: 10px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #244f67;
+        background: #818283;
+        background-size: cover;
+    }
+
+    .search-container {
+        width: 85%;
+        margin: auto auto;
+        margin-bottom: 10px;
+    }
+
+    .weatherWidget {
+        width: 85%;
+        margin: auto auto;
+        margin-bottom: 10px;
+
+    }
+
+    .more-temp-info {
+        display: flex;
+        color: #004870;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    .align {
+        text-align: start;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+
+}
